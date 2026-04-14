@@ -1,0 +1,23 @@
+<app-code-snipped
+  title="Reactive Input - Checkbox"
+  [htmlCode]="htmlExample"
+  [tsCode]="tsExample"
+  [preview]="previewTpl"
+></app-code-snipped>
+
+<!-- 🔥 PREVIEW REAL -->
+<ng-template #previewTpl>
+  <form [formGroup]="form" class="flex flex-col gap-4 w-full max-w-sm">
+
+    <app-cscheckbox
+      label="Acepto los términos"
+      [control]="form.controls.terms"
+    />
+
+    <!-- DEBUG -->
+    <span class="text-sm text-gray-600">
+      Value: {{ form.value | json }}
+    </span>
+
+  </form>
+</ng-template>

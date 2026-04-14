@@ -1,1 +1,14 @@
-<p>csinput-number works!</p>
+<app-form-field [label]="label" [control]="control">
+
+  <input 
+    type="number"
+    [formControl]="control"
+    [placeholder]="placeholder"
+    class="border p-2 rounded outline-none transition-all w-full"
+    [ngClass]="{
+      'border-red-500': control.invalid && (control.touched || control.dirty),
+      'border-green-500': control.valid && (control.touched || control.dirty)
+    }"
+  />
+
+</app-form-field>

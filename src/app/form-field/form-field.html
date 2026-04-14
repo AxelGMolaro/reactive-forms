@@ -1,30 +1,41 @@
 <div class="flex flex-col gap-1 w-full">
 
-  <label class="text-sm font-medium">{{ label }}</label>
+    <label class="text-sm font-medium">{{ label }}</label>
 
-  <ng-content></ng-content>
+    <ng-content></ng-content>
 
-  <!-- ❌ ERRORES -->
-  @if (control?.invalid && (control?.touched || control?.dirty)) {
+    <!-- ❌ ERRORES -->
+    @if (control?.invalid && (control?.touched || control?.dirty)) {
     <div class="text-red-500 text-sm">
 
-      @if (control?.errors?.['required']) {
+        @if (control?.errors?.['required']) {
         <p>Campo obligatorio</p>
-      }
+        }
 
-      @if (control?.errors?.['minlength']) {
+        @if (control?.errors?.['minlength']) {
         <p>Mínimo 3 caracteres</p>
-      }
+        }
 
-      @if (control?.errors?.['maxlength']) {
+        @if (control?.errors?.['maxlength']) {
         <p>Máximo 20 caracteres</p>
-      }
+        }
 
-      @if (control?.errors?.['pattern']) {
+        @if (control?.errors?.['pattern']) {
         <p>Solo letras y espacios</p>
-      }
+        }
 
+        @if (control?.errors?.['required']) {
+        <span>Debes aceptar este campo</span>
+        }
+
+        @if (control?.errors?.['min']) {
+        <span>El valor mínimo es 18</span>
+        }
+
+        @if (control?.errors?.['max']) {
+        <span>El valor máximo es 99</span>
+        }
     </div>
-  }
+    }
 
 </div>
