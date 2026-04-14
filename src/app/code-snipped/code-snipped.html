@@ -1,0 +1,50 @@
+<div class="w-full max-w-xl mx-auto h-full">
+  <h1 class="font-bold">{{ title }}</h1>
+
+  <!-- Tabs -->
+  <div class="flex border-b">
+    <button 
+      class="cursor-pointer px-4 py-2 w-1/3 text-center border-b-2"
+      [ngClass]="activeTab === 1 ? 'border-orange-500 text-orange-500' : 'border-transparent'"
+      (click)="activeTab = 1"
+    >
+      UI
+    </button>
+
+    <button 
+      class="cursor-pointer px-4 py-2 w-1/3 text-center border-b-2"
+      [ngClass]="activeTab === 2 ? 'border-orange-500 text-orange-500' : 'border-transparent'"
+      (click)="activeTab = 2"
+    >
+      TS
+    </button>
+
+    <button 
+      class="cursor-pointer px-4 py-2 w-1/3 text-center border-b-2"
+      [ngClass]="activeTab === 3 ? 'border-orange-500 text-orange-500' : 'border-transparent'"
+      (click)="activeTab = 3"
+    >
+      HTML
+    </button>
+  </div>
+
+  <!-- Content -->
+  <div class="p-4 border h-60 mt-3 overflow-auto bg-black text-white">
+
+    <!-- UI REAL -->
+    <div *ngIf="activeTab === 1">
+      <ng-container *ngTemplateOutlet="preview"></ng-container>
+    </div>
+
+    <!-- TS -->
+    <pre *ngIf="activeTab === 2">
+<code>{{ tsCode }}</code>
+    </pre>
+
+    <!-- HTML -->
+    <pre *ngIf="activeTab === 3">
+<code>{{ htmlCode }}</code>
+    </pre>
+
+  </div>
+</div>
