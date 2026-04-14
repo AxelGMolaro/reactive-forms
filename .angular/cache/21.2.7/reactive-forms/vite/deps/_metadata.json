@@ -1,0 +1,70 @@
+{
+  "hash": "2d068711",
+  "configHash": "17c9c658",
+  "lockfileHash": "74d21b40",
+  "browserHash": "30909ef7",
+  "optimized": {
+    "@angular/common": {
+      "src": "../../../../../../node_modules/@angular/common/fesm2022/common.mjs",
+      "file": "@angular_common.js",
+      "fileHash": "ead4c979",
+      "needsInterop": false
+    },
+    "@angular/core": {
+      "src": "../../../../../../node_modules/@angular/core/fesm2022/core.mjs",
+      "file": "@angular_core.js",
+      "fileHash": "ae3936be",
+      "needsInterop": false
+    },
+    "@angular/forms": {
+      "src": "../../../../../../node_modules/@angular/forms/fesm2022/forms.mjs",
+      "file": "@angular_forms.js",
+      "fileHash": "97697605",
+      "needsInterop": false
+    },
+    "@angular/platform-browser": {
+      "src": "../../../../../../node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs",
+      "file": "@angular_platform-browser.js",
+      "fileHash": "a388814f",
+      "needsInterop": false
+    },
+    "@angular/router": {
+      "src": "../../../../../../node_modules/@angular/router/fesm2022/router.mjs",
+      "file": "@angular_router.js",
+      "fileHash": "24379cac",
+      "needsInterop": false
+    },
+    "prismjs": {
+      "src": "../../../../../../node_modules/prismjs/prism.js",
+      "file": "prismjs.js",
+      "fileHash": "b3c052c8",
+      "needsInterop": true
+    },
+    "prismjs/components/prism-markup": {
+      "src": "../../../../../../node_modules/prismjs/components/prism-markup.js",
+      "file": "prismjs_components_prism-markup.js",
+      "fileHash": "966b0e43",
+      "needsInterop": true
+    },
+    "prismjs/components/prism-typescript": {
+      "src": "../../../../../../node_modules/prismjs/components/prism-typescript.js",
+      "file": "prismjs_components_prism-typescript.js",
+      "fileHash": "87292cb7",
+      "needsInterop": true
+    }
+  },
+  "chunks": {
+    "chunk-OP4ECCP6": {
+      "file": "chunk-OP4ECCP6.js"
+    },
+    "chunk-RJZCLBZ3": {
+      "file": "chunk-RJZCLBZ3.js"
+    },
+    "chunk-35LYHCP3": {
+      "file": "chunk-35LYHCP3.js"
+    },
+    "chunk-H2SRQSE4": {
+      "file": "chunk-H2SRQSE4.js"
+    }
+  }
+}
