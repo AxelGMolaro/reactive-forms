@@ -1,1 +1,25 @@
-<p>csselect works!</p>
+<app-form-field [label]="label" [control]="control">
+
+  <select
+    [formControl]="control"
+    class="border p-2 rounded outline-none transition-all w-full"
+    [ngClass]="{
+      'border-red-500': control.invalid && (control.touched || control.dirty),
+      'border-green-500': control.valid && (control.touched || control.dirty)
+    }"
+  >
+
+    <!-- placeholder -->
+    <option value="" disabled selected hidden>
+      {{ placeholder }}
+    </option>
+
+    @for (opt of options; track opt.value) {
+      <option [value]="opt.value">
+        {{ opt.label }}
+      </option>
+    }
+
+  </select>
+
+</app-form-field>

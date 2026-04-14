@@ -35,6 +35,22 @@
         @if (control?.errors?.['max']) {
         <span>El valor máximo es 99</span>
         }
+
+        @if (control?.errors?.['required']) {
+        <span>Debes seleccionar una opción</span>
+        }
+
+        @if (control?.errors?.['required']) {
+        <span>Este campo es obligatorio</span>
+        }
+
+        @if (control?.errors?.['minlength']) {
+        <span>Mínimo 10 caracteres</span>
+        }
+
+        @if (control?.errors?.['maxlength']) {
+        <span>Máximo 200 caracteres</span>
+        }
     </div>
     }
 

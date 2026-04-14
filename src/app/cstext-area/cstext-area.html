@@ -1,1 +1,14 @@
-<p>cstext-area works!</p>
+<app-form-field [label]="label" [control]="control">
+
+  <textarea
+    [formControl]="control"
+    [placeholder]="placeholder"
+    [rows]="rows"
+    class="border p-2 rounded outline-none transition-all w-full resize-none"
+    [ngClass]="{
+      'border-red-500': control.invalid && (control.touched || control.dirty),
+      'border-green-500': control.valid && (control.touched || control.dirty)
+    }"
+  ></textarea>
+
+</app-form-field>

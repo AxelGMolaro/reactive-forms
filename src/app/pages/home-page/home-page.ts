@@ -7,6 +7,9 @@ import { CSInputEmailDemo } from '../../csinput-email-demo/csinput-email-demo';
 import { CSInputPasswordDemo } from '../../csinput-password-demo/csinput-password-demo';
 import { CSCheckboxDemo } from '../../cscheckbox-demo/cscheckbox-demo';
 import { CSInputNumberDemo } from '../../csinput-number-demo/csinput-number-demo';
+import { CSRadioDemo } from '../../csradio-demo/csradio-demo';
+import { CSSelectDemo } from '../../csselect-demo/csselect-demo';
+import { CSTextAreaDemo } from '../../cstext-area-demo/cstext-area-demo';
 
 @Component({
   selector: 'app-home-page',
@@ -14,6 +17,9 @@ import { CSInputNumberDemo } from '../../csinput-number-demo/csinput-number-demo
     CSInputPasswordDemo,
     CSCheckboxDemo,
     CSInputNumberDemo,
+    CSRadioDemo,
+    CSSelectDemo,
+    CSTextAreaDemo,
     CommonModule],
   templateUrl: './home-page.html',
   styleUrl: './home-page.css',

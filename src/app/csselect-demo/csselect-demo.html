@@ -1,0 +1,22 @@
+<app-code-snipped
+  title="Reactive Input - Select"
+  [htmlCode]="htmlExample"
+  [tsCode]="tsExample"
+  [preview]="previewTpl"
+></app-code-snipped>
+
+<ng-template #previewTpl>
+  <form [formGroup]="form" class="flex flex-col gap-4 w-full max-w-sm">
+
+    <app-csselect
+      label="País"
+      [control]="form.controls.country"
+      [options]="options"
+    />
+
+    <span class="text-sm text-gray-600">
+      Value: {{ form.value | json }}
+    </span>
+
+  </form>
+</ng-template>
