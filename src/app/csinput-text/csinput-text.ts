@@ -1,39 +1,20 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ReactiveFormsModule, FormControl, FormGroup } from '@angular/forms';
-import { CodeSnipped } from '../code-snipped/code-snipped';
+import { ReactiveFormsModule, FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormFieldComponent } from '../form-field/form-field';
 
 @Component({
   selector: 'app-csinput-text',
   standalone: true,
-  imports: [
-    CommonModule,
-    ReactiveFormsModule,
-    CodeSnipped
-  ],
+  imports: [CommonModule, ReactiveFormsModule, FormFieldComponent],
+
   templateUrl: './csinput-text.html',
 })
 export class CSInputText {
 
-  // 🔥 Reactive Form real
-  form = new FormGroup({
-    name: new FormControl('')
-  });
+  @Input() label!: string;
+  @Input() control!: FormControl;
+  @Input() placeholder: string = '';
 
-  // 📄 HTML como string
-  htmlExample = `
-<form [formGroup]="form">
-  <input formControlName="name" class="border p-2" placeholder="Your name" />
-</form>
-
-<p>{{ form.value | json }}</p>
-`;
-
-  // 📄 TS como string
-  tsExample = `
-form = new FormGroup({
-  name: new FormControl('')
-});
-`;
 
 }

@@ -1,21 +1,13 @@
-<app-code-snipped
-  title="Reactive Input"
-  [htmlCode]="htmlExample"
-  [tsCode]="tsExample"
-  [preview]="previewTpl"
-></app-code-snipped>
+<app-form-field [label]="label" [control]="control">
 
-<!-- 🔥 PREVIEW REAL -->
-<ng-template #previewTpl>
-  <form [formGroup]="form" class="flex flex-col gap-2">
-    <input 
-      formControlName="name"
-      class="border p-2 rounded"
-      placeholder="Your name"
-    />
+  <input 
+    [formControl]="control"
+    [placeholder]="placeholder"
+    class="border p-2 rounded outline-none transition-all w-full"
+    [ngClass]="{
+      'border-red-500': control.invalid && control.touched,
+      'border-green-500': control.valid && control.touched
+    }"
+  />
 
-    <span class="text-sm text-gray-600">
-      Value: {{ form.value | json }}
-    </span>
-  </form>
-</ng-template>
+</app-form-field>
